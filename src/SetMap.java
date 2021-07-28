@@ -15,9 +15,9 @@ public class SetMap {
         teamOne.put(1,new Archer(0,0,10,true));
         teamOne.put(2,new Archer(0,0,10,true));
         teamOne.put(3,new Archer(0,0,10,true));
-        teamOne.put(4,new Hero(100,10,true));
-        teamOne.put(5,new Hero(100,10,true));
-        teamOne.put(6,new Hero(100,10,true));
+        teamOne.put(4,new Hero(10,10,true));
+        teamOne.put(5,new Hero(40,10,true));
+        teamOne.put(6,new Hero(20,10,true));
         teamOne.put(7,new Hero(100,10,true));
 
         System.out.println(teamOne);
@@ -25,8 +25,8 @@ public class SetMap {
         //team 2
         HashMap<Integer,Fighter> teamTwo = new HashMap<Integer, Fighter>();
         teamTwo.put(0,new Hero(50,10,false));
-        teamTwo.put(1,new Hero(50,10,false));
-        teamTwo.put(2,new Hero(50,10,false));
+        teamTwo.put(1,new Hero(500,10,false));
+        teamTwo.put(2,new Hero(100,400,false));
         teamTwo.put(3,new Hero(50,10,false));
         teamTwo.put(4,new Archer(0,0,20,false));
         teamTwo.put(5,new Archer(0,0,20,false));
@@ -61,16 +61,27 @@ public class SetMap {
         drawWorld();
         War.war();
     }
+    public static final String TEXT_RESET = "\u001B[0m";
+    public static final String TEXT_RED = "\u001B[31m";
+    public static final String TEXT_GREEN = "\u001B[32m";
     public static void drawWorld(){
-        System.out.println("turn:"+turn+"  ---------------------------");
+        System.out.println("turn:"+turn+'\n'+"  ---------------------------");
         for (int i = 0; i < world.length; i++) {
             for (int j = 0; j < world[0].length; j++) {
-                if(world[i][j] == null){
+                if (world[i][j] == null) {
+                    System.out.print(TEXT_RESET);
                     System.out.print("   |");
-                } else if(world[i][j].isArcher()){
-                    System.out.print(" A |");
                 } else {
-                    System.out.print(" H |");
+                    if (world[i][j].firstTeam) {
+                        System.out.print(TEXT_RED);
+                    } else {
+                        System.out.print(TEXT_GREEN);
+                    }
+                    if (world[i][j].isArcher()) {
+                        System.out.print(" A |");
+                    } else {
+                        System.out.print(" H |");
+                    }
                 }
             }
             System.out.println();

@@ -2,6 +2,7 @@ public abstract class Fighter {
     protected int health;
     protected int power;
     protected boolean firstTeam;
+    protected boolean moved = false;
 
 
     public abstract int getHealth();
