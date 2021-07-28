@@ -1,8 +1,9 @@
 public class Hero extends Fighter {
 
-    public Hero(int health, int power) {
+    public Hero(int health, int power, boolean firstTeam) {
         this.health = health;
         this.power = power;
+        this.firstTeam = firstTeam;
     }
 
     @Override

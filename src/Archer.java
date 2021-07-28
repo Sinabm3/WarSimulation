@@ -2,10 +2,11 @@ public class Archer extends Fighter {
 
     private int rangePower;
 
-    public Archer(int health, int power,int rangePower) {
+    public Archer(int health, int power,int rangePower, Boolean firstTeam) {
         this.health = health;
         this.power = power;
         this.rangePower = rangePower;
+        this.firstTeam = firstTeam;
     }
 
     @Override
@@ -23,4 +24,7 @@ public class Archer extends Fighter {
         return true;
     }
 
+    public int getRangePower() {
+        return rangePower;
+    }
 }
