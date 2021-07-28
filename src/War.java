@@ -63,7 +63,7 @@ public class War {
             if (world[i][j].isArcher()){              //is archer
                 for (int k = i-1; k > 0; k--) {
                     if(world[k][j] != null){   // exists
-                        if( world[k][j]instanceof Hero && !world[k][j].firstTeam){
+                        if( world[k][j]instanceof Hero && world[k][j].firstTeam){
                             world[k][j].damage(((Archer)world[i][j]).getRangePower());
                         }
                     }

@@ -28,7 +28,7 @@ public class SetMap {
         teamTwo.put(1,new Hero(500,10,false));
         teamTwo.put(2,new Hero(100,400,false));
         teamTwo.put(3,new Hero(50,10,false));
-        teamTwo.put(4,new Archer(0,0,20,false));
+        teamTwo.put(4,new Archer(0,0,200,false));
         teamTwo.put(5,new Archer(0,0,20,false));
         teamTwo.put(6,new Archer(0,0,20,false));
         teamTwo.put(7,new Archer(0,0,20,false));
