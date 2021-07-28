@@ -15,23 +15,33 @@ public class SetMap {
         teamOne.put(1,new Archer(0,0,10,true));
         teamOne.put(2,new Archer(0,0,10,true));
         teamOne.put(3,new Archer(0,0,10,true));
-        teamOne.put(4,new Hero(10,10,true));
-        teamOne.put(5,new Hero(40,10,true));
-        teamOne.put(6,new Hero(20,10,true));
-        teamOne.put(7,new Hero(100,10,true));
+        teamOne.put(4,new Hero(600,10,true));
+        teamOne.put(5,new Hero(600,10,true));
+        teamOne.put(6,new Hero(400,10,true));
+        teamOne.put(7,new Hero(700,10,true));
+        teamOne.put(8,new Hero(80,10,true));
+        teamOne.put(9,new Hero(100,10,true));
+        teamOne.put(10,new Hero(100,10,true));
+        teamOne.put(11,new Hero(40,10,true));
+
+
 
         System.out.println(teamOne);
 
         //team 2
         HashMap<Integer,Fighter> teamTwo = new HashMap<Integer, Fighter>();
-        teamTwo.put(0,new Hero(50,10,false));
+        teamTwo.put(0,new Hero(500,10,false));
         teamTwo.put(1,new Hero(500,10,false));
-        teamTwo.put(2,new Hero(100,400,false));
-        teamTwo.put(3,new Hero(50,10,false));
-        teamTwo.put(4,new Archer(0,0,200,false));
-        teamTwo.put(5,new Archer(0,0,20,false));
-        teamTwo.put(6,new Archer(0,0,20,false));
-        teamTwo.put(7,new Archer(0,0,20,false));
+        teamTwo.put(2,new Hero(400,40,false));
+        teamTwo.put(3,new Hero(200,10,false));
+        teamTwo.put(4,new Archer(0,0,30,false));
+        teamTwo.put(5,new Archer(0,0,40,false));
+        teamTwo.put(6,new Archer(0,0,50,false));
+        teamTwo.put(7,new Archer(0,0,10,false));
+        teamTwo.put(8,new Archer(0,0,50,false));
+        teamTwo.put(9,new Archer(0,0,20,false));
+        teamTwo.put(10,new Archer(0,0,20,false));
+        teamTwo.put(11,new Archer(0,0,20,false));
 
         System.out.println(teamTwo);
 
@@ -45,7 +55,7 @@ public class SetMap {
                 count++;
                 world[0][i] = team1.get(i);
             } else {
-                world[1][i-count] = team1.get(i);
+                    world[1][i - count] = team1.get(i);
             }
         }
 
